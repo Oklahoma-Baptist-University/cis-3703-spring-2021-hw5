@@ -121,13 +121,11 @@ def p16():
         x_pos = left_spacing + (bar_width + inter_bar_spacing) * i
         y_pos = window_height - 10 - (label_height / 2)
         label = Text(Point(x_pos, y_pos), str(i))
-        print("Label anchor", label.getAnchor().getX())
         label.setSize(10)
         label.draw(win)
         
         x_pos = left_spacing + (bar_width + inter_bar_spacing) * i
         y_pos = y_pos - label_height / 2 - inter_bar_spacing
-        print("Rect x pos", x_pos)
         Rectangle(Point(x_pos, y_pos), 
                   Point(x_pos + bar_width, y_pos - (100 * score_list[i] / total_possible_count))).draw(win)
 
